@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GearWise Lab</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="alternate" hreflang="en" href="https://gearwiselab.com/en/">
+  <link rel="alternate" hreflang="hu" href="https://gearwiselab.com/hu/">
+  <link rel="alternate" hreflang="de" href="https://gearwiselab.com/de/">
+  <link rel="alternate" hreflang="x-default" href="https://gearwiselab.com/en/">
+  <script>
+    (function () {
+      var supported = ["en", "hu", "de"];
+      var langs = navigator.languages || [navigator.language || "en"];
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).slice(0, 2).toLowerCase();
+        if (supported.indexOf(code) !== -1) { location.replace("/" + code + "/"); return; }
+      }
+      location.replace("/en/");
+    })();
+  </script>
+</head>
+<body>
+  <div class="picker wrap">
+    <div>
+      <h1>GearWise Lab</h1>
+      <div class="langs">
+        <a class="btn" href="/en/" hreflang="en">English</a>
+        <a class="btn" href="/hu/" hreflang="hu">Magyar</a>
+        <a class="btn" href="/de/" hreflang="de">Deutsch</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
